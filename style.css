@@ -9,6 +9,7 @@ body {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
+    position: relative;
 }
 #header {
     font-family: "Poppins", sans-serif;
@@ -29,6 +30,9 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50px;
 }
 #menu li {
     display: inline-block;
@@ -51,9 +55,10 @@ a {
     color: #ffffff;
     padding: 10px 25px;
 }
-#headerCta p {
+p.gray{
     font-family: Poppins;
     color: #575455;
+    margin-bottom: 32px;
 }
 #headerCta h1 {
     font-weight: bold;
@@ -65,4 +70,128 @@ a {
 }
 #headerImg img {
     width: 100%;
+    border-radius: 30px;
+}
+.headerLogo {
+    text-align: center;
+    min-width: fit-content;
+}
+#clients {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#headerClientText {
+    font-size: 16px;
+    line-height: 24px;
+    color: #070F18;
+}
+h2.red {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #F75C4E;
+}
+h1.black {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: black;
+}
+.textCenter {
+    text-align: center;
+}
+#services .textCenter h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #070F18;
+}
+#services .textCenter p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+#contactImg img {
+    width: 100%;
+}
+.contactForm {
+    margin-left: 75px;
+    text-align: left;
+}
+#contact {
+    margin-top: 100px;
+}
+.contactForm input {
+    background-color: #F5F6FB;
+    border-radius: 50px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #575455;
+    border: 0;
+    width: 70%;
+    padding: 15px 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.contactForm button {
+    background-color: #1F7CFF;
+    padding: 15px 30px;
+    width: 180px;
+    height: 48px;
+    top: 1662px;
+    left: 813px;
+    border-radius: 50px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.contactForm button:hover {
+    cursor: pointer;
+    transform: translateY(-7px);
+    transition: 0.5s;
+    box-shadow: #1F7CFF 5px 5px 20px;
+}
+#portifolioTitle {
+    margin-top: 150px;
+}
+#portifolioImg {
+    padding: 20px;
+}
+#portifolioImg img {
+    width: 100%;
+}
+
+@media (max-width: 1120px) {
+    .container {
+        grid-auto-flow: dense;
+    }
+    #headerImg img {
+        display: none;
+    }
+    #clients {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .container#clients {}
+    .headerLogo {
+        width: fit-content;
+    }
+    #services {
+        grid-auto-flow: column;
+    }
+}
+@media (max-width: 860px) {
+    #services {
+        grid-auto-flow: dense;
+    }
 }
